@@ -2,4 +2,4 @@
 172.16.139.91 ansible_user=niraj
 
 [shubham]
-192.168.63.129 ansible_user=shubham
+192.168.63.127 ansible_user=shubham
