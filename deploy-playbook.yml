@@ -1,0 +1,19 @@
+---
+- name: Deploy Docker Image to Container
+  hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Pull Docker Image
+      docker_image:
+        name: nirajlande/calculator-using-devops
+        tag: latest
+        source: pull
+
+    - name: Create & Start Calculator Docker Container
+      docker_container:
+        name: calculator-using-devops
+        image: nirajlande/calculator-using-devops
+        state: started
+        tty: yes
+        interactive: yes
