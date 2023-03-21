@@ -18,7 +18,10 @@ public class Calculator {
         Scanner sc = new Scanner(System.in);
         int choices, flag=0;
         double num, exp;
+
         int fact_num;
+        System.out.println("Press Enter key to start the application\n");
+        scanner.nextLine();
         System.out.println("-*-*-*-*-*-*-*-Calculator-*-*-*-*-*-*-*-");
         do{
             System.out.println("\nCalculator Devops Project \nwith following list of operations : ");
