@@ -1,0 +1,7 @@
+
+2023-03-21 23:58:05.768 [main] INFO  calculator.Calculator - SquareRoot calculation
+2023-03-21 23:58:08.500 [main] INFO  calculator.Calculator - Factorial calculation
+2023-03-21 23:58:24.893 [main] INFO  calculator.Calculator - NaturalLog calculation
+2023-03-21 23:58:29.751 [main] INFO  calculator.Calculator - Power calculation
+2023-03-22 00:07:00.697 [main] INFO  calculator.Calculator - NaturalLog calculation
+2023-03-22 00:07:06.971 [main] INFO  calculator.Calculator - Power calculation

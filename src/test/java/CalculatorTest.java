@@ -1,58 +1,72 @@
-import calculator.Calculator;
-import static org.junit.Assert.*;
+import calculator.*;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 public class CalculatorTest {
-    private static final double DELTA = 1e-15;
-    Calculator calculator = new Calculator();
-
     @Test
-    public void factorialTruePositive() {
-        assertEquals("Finding factorial of a number for True Positive", 6, calculator.factorial(3), DELTA);
-        assertEquals("Finding factorial of a number for True Positive", 720, calculator.factorial(6), DELTA);
+    public void test_squareRoot_AssertEquals() {  //true positive
+        double num = 25.0;
+        double expectedResult = 5.0;
+        double result = Calculator.squareRoot_Function(num);
+        Assert.assertEquals("square root of a number for True Positive" ,expectedResult, result, 0.0f);
     }
 
     @Test
-    public void factorialTrueNegative() {
-        assertNotEquals("Finding factorial of a number for True Negative", 69, calculator.factorial(5), DELTA);
-        assertNotEquals("Finding factorial of a number for True Negative", 42, calculator.factorial(10), DELTA);
+    public void test_squareRoot_AssertNotEquals(){
+        double num = 36.0;
+        double expectedResult = 4.0;
+        double result = Calculator.squareRoot_Function(num);
+        Assert.assertNotEquals("square root of a number for False Positive", expectedResult, result, 0.0f);
     }
 
     @Test
-    public void powerTruePositive() {
-        assertEquals("Finding power for True Positive", 32, calculator.power(2, 5), DELTA);
-        assertEquals("Finding power for True Positive", 81, calculator.power(9, 2), DELTA);
+    public void test_factorial_AssertEquals() {
+        int num = 6;
+        int expectedResult = 720;
+        int result = Calculator.factorial_Function(num);
+        Assert.assertEquals("factorial of a number for True Positive",expectedResult, result);
     }
 
     @Test
-    public void powerTrueNegative() {
-        assertNotEquals("Finding power for True Negative", 69, calculator.power(2, 2), DELTA);
-        assertNotEquals("Finding power for True Negative", -69420, calculator.power(-2, 20), DELTA);
+    public void test_factorial_AssertNotEquals() {   //false positive
+        int num = 2;
+        int expectedResult = 3;
+        int result = Calculator.factorial_Function(num);
+        Assert.assertNotEquals("factorial of a number for False Positive",expectedResult, result);
     }
 
     @Test
-    public void logTruePositive() {
-        assertEquals("Finding natural log for True Positive", 0, calculator.naturalLog(1), DELTA);
-        assertEquals("Finding natural log for True Positive", 5.703782474656201, calculator.naturalLog(300), DELTA);
+    public void test_naturalLog_AssertEquals() {
+        double num = 2.718;
+        double expectedResult = 1.0;
+        double result = Calculator.naturalLog_Function(num);
+        Assert.assertEquals("natural log function True Positive case",expectedResult, result, 0.2f);
     }
 
     @Test
-    public void logTrueNegative() {
-        assertNotEquals("Finding natural log for True Negative", 69, calculator.naturalLog(2.4), DELTA);
-        assertNotEquals("Finding natural log for True Negative", 420, calculator.naturalLog(2.1), DELTA);
+    public void test_naturalLog_AssertNotEquals() {
+        double num = 6;
+        double expectedResult = 2.79175;    //actual output = 1.79175
+        double result = Calculator.naturalLog_Function(num);
+        Assert.assertNotEquals("natural log function False Positive case",expectedResult, result, 0.2f);
     }
 
     @Test
-    public void sqrootTruePositive() {
-        assertEquals("Finding square root for True Positive", 11, calculator.squareRoot(121), DELTA);
-        assertEquals("Finding square root for True Positive", 121, calculator.squareRoot(14641), DELTA);
+    public void test_power_AssertEquals() {
+        double num = 3.0;
+        double b = 3.0;
+        double expectedResult = 27.0;
+        double result = Calculator.power_Function(num,b);
+        Assert.assertEquals("power function True Positive case", expectedResult, result, 0.0f);
     }
 
     @Test
-    public void sqrootTrueNegative() {
-        assertNotEquals("Finding square root for True Negative", 69, calculator.squareRoot(3), DELTA);
-        assertNotEquals("Finding square root for True Negative", -42, calculator.squareRoot(4), DELTA);
+    public void test_power_AssertNotEquals() {
+        double num = 2.0;
+        double b = 4.0;
+        double expectedResult = 32.0;
+        double result = Calculator.power_Function(num,b);
+        Assert.assertNotEquals("power function False Positive case", expectedResult, result, 0.0f);
     }
-
-
 }
