@@ -9,3 +9,11 @@
 2023-03-22 00:47:13.168 [main] INFO  calculator.Calculator - SquareRoot calculation
 2023-03-22 00:47:14.793 [main] INFO  calculator.Calculator - Factorial calculation
 2023-03-22 00:47:17.902 [main] INFO  calculator.Calculator - NaturalLog calculation
+2023-03-22 19:49:09.978 [main] INFO  calculator.Calculator - Factorial calculation
+2023-03-22 19:49:09.987 [main] INFO  calculator.Calculator - Power calculation
+2023-03-22 19:49:09.988 [main] INFO  calculator.Calculator - SquareRoot calculation
+2023-03-22 19:49:09.990 [main] INFO  calculator.Calculator - NaturalLog calculation
+2023-03-22 19:49:09.992 [main] INFO  calculator.Calculator - NaturalLog calculation
+2023-03-22 19:49:09.995 [main] INFO  calculator.Calculator - Power calculation
+2023-03-22 19:49:09.997 [main] INFO  calculator.Calculator - SquareRoot calculation
+2023-03-22 19:49:09.999 [main] INFO  calculator.Calculator - Factorial calculation

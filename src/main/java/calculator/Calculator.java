@@ -20,7 +20,7 @@ public class Calculator {
         double num, exp;
 
         int fact_num;
-        System.out.println("Press Enter key to start the application\n");
+        System.out.println("Press Enter key n");
         sc.nextLine();
         System.out.println("-*-*-*-*-*-*-*-Calculator-*-*-*-*-*-*-*-");
         do{
